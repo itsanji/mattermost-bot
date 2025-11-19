@@ -7,7 +7,13 @@
         "build": "tsc",
         "start": "node dist/bot.js",
         "dev": "ts-node src/bot.ts",
-        "watch": "tsc --watch"
+        "watch": "tsc --watch",
+        "pm2:start": "pm2 start ecosystem.config.js",
+        "pm2:stop": "pm2 stop mattermost-scheduler-bot",
+        "pm2:restart": "pm2 restart mattermost-scheduler-bot",
+        "pm2:delete": "pm2 delete mattermost-scheduler-bot",
+        "pm2:logs": "pm2 logs mattermost-scheduler-bot",
+        "pm2:status": "pm2 status"
     },
     "keywords": [
         "mattermost",
